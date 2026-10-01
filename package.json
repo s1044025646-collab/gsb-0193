@@ -1,0 +1,27 @@
+{
+  "name": "pocketcube-analyzer",
+  "version": "1.0.0",
+  "description": "固定朝向二阶魔方状态校验与最短复原搜索后端（TypeScript + Node.js + SQLite）",
+  "type": "module",
+  "main": "dist/api/server.js",
+  "bin": {
+    "pcube": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/api/server.js",
+    "dev": "tsx src/api/server.ts",
+    "cli": "tsx src/cli/index.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "pdb:build": "tsx src/cli/index.ts pdb build",
+    "demo": "tsx scripts/demo.ts"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
